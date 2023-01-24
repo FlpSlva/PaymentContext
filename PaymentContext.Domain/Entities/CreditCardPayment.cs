@@ -1,8 +1,9 @@
-﻿using System;
+﻿using PaymentContext.Domain.ValuesObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Reflection.Metadata;
+
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,5 +39,6 @@ namespace PaymentContext.Domain.Entities
         public string CardHolderName { get; private set; }
         public string CardNumber { get; private set; }
         public string LastTransactionNumber { get;  private set; }
+        
     }
 }
