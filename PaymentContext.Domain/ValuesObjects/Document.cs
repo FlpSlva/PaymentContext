@@ -1,4 +1,5 @@
 ﻿using PaymentContext.Domain.Enums;
+using PaymentContext.Shared.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PaymentContext.Domain.ValuesObjects
 {
-    public class Document
+    public class Document : ValueObject
     {
 
         public Document(string number, EDocumentType type)
