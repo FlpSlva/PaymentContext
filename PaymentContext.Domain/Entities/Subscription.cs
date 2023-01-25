@@ -1,3 +1,5 @@
+using Flunt.Validations;
+using PaymentContext.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PaymentContext.Domain.Entities
 {
-    public class Subscription
+    public class Subscription : Entity
     {
         public Subscription( DateTime? expireDate)
         {
@@ -14,6 +16,7 @@ namespace PaymentContext.Domain.Entities
             ExpireDate = expireDate;
             Active = true;
             
+
         }
 
         public DateTime CreateDate {get; private set;}
@@ -24,7 +27,13 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Payment payment)
         {
+            AddNotifications(new Contract()
+                .Requires()
+                .IsGreaterThan(DateTime.Now, payment.PaidDate, "Subscription.Payments", "A data do pagamento deve ser futura"));
+
+            if(Valid)
             Payments.Add(payment);
+
         }
 
         public void Activate() 
