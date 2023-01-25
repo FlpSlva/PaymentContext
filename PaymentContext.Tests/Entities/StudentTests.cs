@@ -1,4 +1,5 @@
 using PaymentContext.Domain.Entities;
+using PaymentContext.Domain.ValuesObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,8 @@ namespace PaymentContext.Tests.Entities
     {
         [TestMethod]
         public void TestMethod1()
-        { 
-            //var subscription = new Subscription(null);
-            //var student = new Student("felipe", "silva", "@gmail.com", "-22");
-            //student.AddSubscription(subscription);
+        {
+            
         }
     }
 }
