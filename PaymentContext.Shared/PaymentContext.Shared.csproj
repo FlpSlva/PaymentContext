@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="flunt" Version="2.0.5" />
-    <PackageReference Include="Flunt.Br" Version="2.0.0" />
+    <PackageReference Include="Flunt" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
