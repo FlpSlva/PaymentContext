@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PaymentContext.Shared.Entities
 {
-    public abstract class Entity : Notifiable<Notification>
+    public abstract class Entity : Notifiable
     {
         public Guid Id { get; private set; } = Guid.NewGuid();
     }
