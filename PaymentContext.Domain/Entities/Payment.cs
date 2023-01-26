@@ -31,7 +31,7 @@ namespace PaymentContext.Domain.Entities
 
             AddNotifications(new Contract()
                 .Requires()
-                .IsGreaterThan(0, Total, "Payment.Total", "O total não pode ser 0")
+                .IsLowerOrEqualsThan(0, Total, "Payment.Total", "O total não pode ser 0")
                 .IsGreaterOrEqualsThan(total, TotalPaid, "Payment.TotalPaid", "O valor pago é menor que o valor do pagamento"));
 
         }
